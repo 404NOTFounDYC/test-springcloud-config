@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #\u4ED3\u5E93\u5730\u5740{application}=spring.application.name: config-server
+          uri: https://github.com/404NOTFounDYC
+          searchPaths: config
+          #\u7528\u6237\u540D
+          username: 404NOTFounDYC
+          #\u5BC6\u7801
+          passphrase: zx15121464
+          #\u5206\u652F
+          default-label: master
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
